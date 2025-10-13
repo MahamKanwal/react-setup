@@ -1,26 +1,18 @@
-import React, { Children } from 'react'
-import CounterCard from './CounterCard'
-const BtnsBar = ({ count, setCount }) => {
+const BtnsBar = ({ setCount, triggerMeInsideBtnsBar }) => {
+
     const increase = () => {
-        setCount(count + 1)
-        setCount(count + 1)
-        console.log(count)
+        setCount(p => p + 1);
     }
     const decrease = () => {
-        if (count > 0) {
-            setCount(count - 1)
-        }
+        setCount(p => p > 0 ? p - 1 : 0);
     }
     const reset = () => {
+        triggerMeInsideBtnsBar("reset kya gya count ko");
         setCount(0)
     }
 
-
-
-
     return (
         <>
-            <CounterCard count={count} />
             <div className="flex justify-center gap-4">
                 <button
                     onClick={decrease}
