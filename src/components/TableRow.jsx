@@ -1,6 +1,8 @@
 import React from 'react'
+import { useStudents } from '../contexts/StudentContext';
 
-const TableRow = ({ name, email, id, handleDeleteStudent }) => {
+const TableRow = ({ name, email, id }) => {
+    const { handleDeleteStudent } = useStudents();
 
     const hanleDelete = () => {
         handleDeleteStudent(id)

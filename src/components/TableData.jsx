@@ -1,30 +1,9 @@
-import React, { useState } from 'react'
 import TableRow from './TableRow'
-const stds = [
-    {
-        id: 1,
-        name: "ali",
-        email: "ali@gmail.com"
-    },
-    {
-        id: 2,
-        name: "ahmed",
-        email: "ahmed@gmail.com"
-    },
-    {
-        id: 3,
-        name: "alina",
-        email: "alina@gmail.com"
-    },
-]
+import { useStudents } from '../contexts/StudentContext';
 
 const TableData = () => {
-    const [students, setStudents] = useState(stds);
+    const {students} = useStudents();
 
-    const handleDeleteStudent = (id) => {
-        const updatedStudents = students.filter(std => std.id != id)
-        setStudents(updatedStudents);
-    }
     return (
         <table>
             <thead>
@@ -35,10 +14,9 @@ const TableData = () => {
                 </tr>
             </thead>
             <tbody>
-
                 {
                     students.map(std => (
-                        <TableRow key={std.id} {...std} handleDeleteStudent={handleDeleteStudent} />
+                        <TableRow key={std.id} {...std} />
                     ))
                 }
             </tbody>
