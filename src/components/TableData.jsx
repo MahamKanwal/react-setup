@@ -16,7 +16,7 @@ const TableData = () => {
             <tbody>
                 {
                     students.map(std => (
-                        <TableRow key={std.id} {...std} />
+                        <TableRow key={std.id} std={std} />
                     ))
                 }
             </tbody>
