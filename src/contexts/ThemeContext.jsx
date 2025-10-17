@@ -1,27 +1,25 @@
-// step 1 create a context
-// step 2 create a conext provider
-// step 3 return with wraped children
-// step 4 add a value in context provider prop
-// step 5 wrap app with this provider
-// step 6 create a useConetxt custom function
-
 import { createContext, useContext, useEffect, useState } from "react";
 
-const themeContext = createContext();
+// 1️⃣ Create the context
+const ThemeContext = createContext();
 
+// 2️⃣ Create the provider component
 const ThemeProvider = ({ children }) => {
+    // Function to get theme value from localStorage
     const getThemeValue = () => {
-        console.log(localStorage.getItem("darkMode"))
-        return localStorage.getItem("darkMode") || false;
-    }
+        // localStorage stores strings, so we convert to boolean
+        return localStorage.getItem("darkMode") === "true";
+    };
 
+    // 3️⃣ Define state
     const [darkMode, setDarkMode] = useState(getThemeValue);
 
+    // 4️⃣ Function to toggle theme
     const toggleTheme = () => {
-        localStorage.setItem("darkMode", !darkMode);
-        setDarkMode(!darkMode);
-
-    }
+        const newMode = !darkMode;
+        localStorage.setItem("darkMode", newMode);
+        setDarkMode(newMode);
+    };
 
     useEffect(() => {
         if (darkMode) {
@@ -31,22 +29,23 @@ const ThemeProvider = ({ children }) => {
         }
     }, [darkMode]);
 
+    // 6️⃣ Context value
     const themeContextValue = {
         darkMode,
-        toggleTheme
-    }
+        toggleTheme,
+    };
 
-
+    // 7️⃣ Return the provider with children
     return (
-        <themeContext.Provider value={themeContextValue}>
+        <ThemeContext.Provider value={themeContextValue}>
             {children}
-        </themeContext.Provider>
-    )
-}
+        </ThemeContext.Provider>
+    );
+};
 
+// 8️⃣ Export the provider as default
 export default ThemeProvider;
 
-
+// 9️⃣ Create a custom hook for easy access
 // eslint-disable-next-line react-refresh/only-export-components
-export const useTheme = () => useContext(themeContext);
-
+export  const useTheme = () => useContext(ThemeContext);

@@ -1,5 +1,5 @@
 import { FaMoon, FaSun } from "react-icons/fa";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme} from "../contexts/ThemeContext";
 const TopBar = () => {
     const { darkMode, toggleTheme } = useTheme();
     return (
@@ -11,11 +11,7 @@ const TopBar = () => {
                 className="p-2 rounded-full bg-white/20 hover:bg-white/30 dark:bg-black/20 dark:hover:bg-black/30 transition-colors duration-200"
                 aria-label="Toggle theme"
             >
-                {darkMode ? (
-                    <FaSun className="h-6 w-6 text-yellow-300" />
-                ) : (
-                    <FaMoon className="h-6 w-6" />
-                )}
+                {darkMode ? <FaSun className="h-6 w-6 text-yellow-300" /> : <FaMoon className="h-6 w-6" />}
             </button>
         </div>
     );
