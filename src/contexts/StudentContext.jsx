@@ -13,13 +13,13 @@ const StudentProvider = ({ children }) => {
         setStudents(updatedStudents);
     }
 
-    const addAndUpdateStudent = (std) => {
+    const addAndUpdateStudent = (newStd) => {
         if (editStudent) {
-            const updateStudents = students.map(oldStd => oldStd.id == editStudent.id ? std : oldStd);
+            const updateStudents = students.map(oldStd => oldStd.id == editStudent.id ? newStd : oldStd);
             setStudents(updateStudents);
+            setEditStudent(null);
         } else {
-            const newStd = { ...std, id: students.length + 1 };
-            setStudents([...students, newStd]);
+            setStudents([...students, { ...newStd, id: students.length + 1 }]);
         }
     }
 

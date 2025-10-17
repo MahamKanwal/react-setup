@@ -3,7 +3,6 @@ import { useStudents } from '../contexts/StudentContext';
 
 const TableData = () => {
     const {students} = useStudents();
-
     return (
         <table>
             <thead>
