@@ -8,7 +8,7 @@ const ThemeProvider = ({ children }) => {
     // Function to get theme value from localStorage
     const getThemeValue = () => {
         // localStorage stores strings, so we convert to boolean
-        return localStorage.getItem("darkMode") === "true";
+        return localStorage.getItem("darkMode") == "true";
     };
 
     // 3️⃣ Define state

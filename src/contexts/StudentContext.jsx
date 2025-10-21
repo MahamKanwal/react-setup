@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import api from "../Api";
 
 // 1️⃣ Create Context
 const StudentContext = createContext();
@@ -14,6 +15,8 @@ const StudentProvider = ({ children }) => {
     }
 
     const addAndUpdateStudent = (newStd) => {
+ const users  = api.userApi.getAllUsers();
+console.log(users);
         if (editStudent) {
             const updateStudents = students.map(oldStd => oldStd.id == editStudent.id ? newStd : oldStd);
             setStudents(updateStudents);
