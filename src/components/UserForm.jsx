@@ -18,7 +18,7 @@ const UserForm = () => {
 
     useEffect(() => {
         if (editUser) {
-            setStdObj(editUser);
+            setUserObj(editUser);
         }
     }, [editUser])
 

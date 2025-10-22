@@ -3,17 +3,12 @@
     {
       "id": "1",
       "name": "a",
-      "email": "ai@gmail.com"
+      "email": "a@gmail.com"
     },
     {
       "id": "2",
-      "name": "ali",
-      "email": "ali@gmail.com"
-    },
-    {
-      "id": "3",
-      "name": "ali",
-      "email": "ali@gmail.com"
+      "name": "ahmed",
+      "email": "ahmed@gmail.com"
     }
   ],
   "products": []
