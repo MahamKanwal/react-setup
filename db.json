@@ -1,4 +1,15 @@
 {
-    "users":[],
-    "products":[]
+  "users": [
+    {
+      "id": "1",
+      "name": "a",
+      "email": "ai@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "ali",
+      "email": "ali@gmail.com"
+    }
+  ],
+  "products": []
 }
