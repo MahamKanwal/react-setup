@@ -1,15 +1,15 @@
 import React from 'react'
-import { useStudents } from '../contexts/StudentContext';
+import { useUsers } from '../contexts/UserContext';
 
-const TableRow = ({ std }) => {
-    const { name, email, id } = std;
-    const { handleDeleteStudent, editStudentFn } = useStudents();
+const TableRow = ({ user }) => {
+    const { name, email, id } = user;
+    const { handleDeleteUser, editUserFn } = useUsers();
 
     const hanleDelete = () => {
-        handleDeleteStudent(id)
+        handleDeleteUser(id)
     }
     const handleEdit = () => {
-        editStudentFn(std);
+        editUserFn(user);
     }
     return (
         <tr>

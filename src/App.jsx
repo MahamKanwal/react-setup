@@ -1,5 +1,5 @@
 import Counter from "./components/Counter";
-import StudentForm from "./components/StudentForm";
+import UserForm from "./components/UserForm";
 import TableData from "./components/TableData";
 import TopBar from "./components/TopBar";
 
@@ -9,7 +9,7 @@ const App = () => {
       {/* <Counter/> */}
       <TopBar />
       <div className=" flex flex-col items-center justify-center min-h-[calc(100vh-65px)]">
-        <StudentForm />
+        <UserForm />
         <TableData />
       </div>
     </div>

@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { useStudents } from "../contexts/StudentContext";
+import { useUsers } from "../contexts/UserContext";
 
-const StudentForm = () => {
-    const { addAndUpdateStudent, editStudent } = useStudents();
-    const [stdObj, setStdObj] = useState({ name: "", email: "" });
+const UserForm = () => {
+    const { addAndUpdateUser, editUser } = useUsers();
+    const [userObj, setUserObj] = useState({ name: "", email: "" });
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addAndUpdateStudent(stdObj);
-        setStdObj({ name: "", email: "" });
+        addAndUpdateUser(userObj);
+        setUserObj({ name: "", email: "" });
     };
 
     const handleChange = ({ target: { name, value } }) => {
-        setStdObj({ ...stdObj, [name]: value });
+        setUserObj({ ...userObj, [name]: value });
     };
 
     useEffect(() => {
-        if (editStudent) {
-            setStdObj(editStudent);
+        if (editUser) {
+            setStdObj(editUser);
         }
-    }, [editStudent])
+    }, [editUser])
 
 
 
     return (
         <div className="max-w-md mx-auto bg-white/70 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-200 transition-all duration-300 hover:shadow-xl">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
-                ✨ Add New Student
+                ✨ Add New User
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -41,7 +41,7 @@ const StudentForm = () => {
                     </label>
                     <input
                         name="name"
-                        value={stdObj.name}
+                        value={userObj.name}
                         onChange={handleChange}
                         type="text"
                         required
@@ -60,7 +60,7 @@ const StudentForm = () => {
                     </label>
                     <input
                         name="email"
-                        value={stdObj.email}
+                        value={userObj.email}
                         onChange={handleChange}
                         type="email"
                         required
@@ -74,7 +74,7 @@ const StudentForm = () => {
                     type="submit"
                     className="w-full bg-indigo-600 text-white py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
                 >
-                    ➕ {editStudent ? "Update" : "Add"} Student
+                    ➕ {editUser ? "Update" : "Add"} User
                 </button>
 
 
@@ -83,4 +83,4 @@ const StudentForm = () => {
     );
 };
 
-export default StudentForm;
+export default UserForm;

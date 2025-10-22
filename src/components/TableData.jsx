@@ -1,8 +1,8 @@
 import TableRow from './TableRow'
-import { useStudents } from '../contexts/StudentContext';
+import {useUsers} from '../contexts/UserContext';
 
 const TableData = () => {
-    const {students} = useStudents();
+    const {users} = useUsers();
     return (
         <table>
             <thead>
@@ -14,8 +14,8 @@ const TableData = () => {
             </thead>
             <tbody>
                 {
-                    students.map(std => (
-                        <TableRow key={std.id} std={std} />
+                users.map(user => (
+                        <TableRow key={user.id} user={user}/>
                     ))
                 }
             </tbody>

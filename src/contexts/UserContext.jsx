@@ -15,8 +15,8 @@ const UserProvider = ({ children }) => {
 const updatedUsers = users.filter(user => user.id != id)
         setUsers(updatedUsers);
     };
+       };
 
-       } 
     const addAndUpdateUser = async(newUser) => {
         if (editUser) {
             const user = await api.userApi.updateUser(newUser);
@@ -38,7 +38,7 @@ if(!user) return;
 
 const fetchAllUsers = async() => {
  const users  = await api.userApi.getAllUsers();
- setStudents(users);
+ setUsers(users);
 }
 
 useEffect(() =>{
