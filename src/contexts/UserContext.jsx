@@ -41,7 +41,7 @@ const UserProvider = ({ children }) => {
   const fetchAllUsers = async () => {
     const users = await api.userApi.getAllUsers();
     if (!users) return;
-        setUsers(users);
+    setUsers(users);
   };
 
   useEffect(() => {

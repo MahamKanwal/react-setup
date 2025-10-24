@@ -6,7 +6,7 @@ const getAllUsers = async () => {
     const { data } = await axios.get(`${apiUrl}/users`);
     return data;
   } catch (error) {
-    console.error("Error fetching users:", error);
+    console.error("Error fetching user:", error);
   }
 };
 
