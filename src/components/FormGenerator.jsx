@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const FormGenerator = () => {
-  return (
-   <form action="">
+  return <form action=""></form>;
+};
 
-   </form>
-  )
-}
-
-export default FormGenerator
+export default FormGenerator;

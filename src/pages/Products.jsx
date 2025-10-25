@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Drawer from "../components/Drawer";
 import FormGenerator from "../components/formGenerator";
+import { IoMdAdd } from "react-icons/io";
 // import {
 //   FaDollarSign,
 //   FaFile,
@@ -17,9 +18,7 @@ const Products = () => {
     setIsOpen(!isOpen);
   };
 
-const productFormFields = [
-{},
-]
+  const productFormFields = [{}];
 
   return (
     <div>
@@ -29,7 +28,8 @@ const productFormFields = [
         isOpen={isOpen}
         onClose={toggleDrawer}
       >
-      <FormGenerator fields={productFormFields}/>
+        <FormGenerator fields={productFormFields} />
+
         {/* <form className="flex-1 space-y-4">
           <div className="flex flex-col">
             <label className="flex items-center gap-2 text-gray-700 font-medium">
@@ -91,7 +91,6 @@ const productFormFields = [
             <div className="text-red-700 text-sm" data-error="brand"></div>
           </div>
 
-    
           <div className="flex flex-col">
             <label className="flex items-center gap-2 text-gray-700 font-medium">
               <FaLayerGroup className="text-purple-700" /> Category
@@ -110,7 +109,6 @@ const productFormFields = [
             <div className="text-red-700 text-sm" data-error="category"></div>
           </div>
 
-        
           <div className="flex flex-col">
             <label className="flex items-center gap-2 text-gray-700 font-medium">
               <FaFile className="text-gray-700" /> Upload Picture
@@ -121,12 +119,10 @@ const productFormFields = [
               className="mt-1 rounded-lg p-2 w-full border border-blue-800 focus:outline-none"
             />
 
-        
             <div className="flex justify-center items-center border border-gray-300 w-20 h-16 rounded-md hidden">
               <div className="w-5 h-5 border-2 border-transparent border-t-indigo-600 rounded-full animate-spin"></div>
             </div>
 
-         
             <div
               className="h-16 w-20 relative rounded-md hidden overflow-hidden mt-2"
               name="previewImg"
@@ -147,8 +143,13 @@ const productFormFields = [
         </form> */}
       </Drawer>
 
-<button onClick={toggleDrawer}>Add Products</button>
-
+      <button
+        onClick={toggleDrawer}
+        className="px-4 py-2 bg-gray-100 rounded-lg mt-2 mr-auto block flex items-center"
+      >
+        <IoMdAdd className="text-xl" />
+        Add Products
+      </button>
     </div>
   );
 };
