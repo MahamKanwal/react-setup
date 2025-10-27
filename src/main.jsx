@@ -3,10 +3,13 @@ import "./index.css";
 import App from "./App";
 import UserProvider from "./contexts/UserContext";
 import ThemeProvider from "./contexts/ThemeContext";
+import ProductProvider from "./contexts/ProductContext";
 createRoot(document.getElementById("root")).render(
-  <ThemeProvider>
+ <ThemeProvider>
     <UserProvider>
+      <ProductProvider>
       <App />
+      </ProductProvider>
     </UserProvider>
   </ThemeProvider>
 );

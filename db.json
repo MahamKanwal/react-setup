@@ -11,5 +11,13 @@
       "email": "ahmed@gmail.com"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "id": "1",
+      "product_name": "lap",
+      "price": "999",
+      "category": "Electronics",
+      "brand": "Nike"
+    }
+  ]
 }

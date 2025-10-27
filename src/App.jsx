@@ -20,3 +20,7 @@ const App = () => {
 };
 
 export default App;
+
+// const nums = [4, 1, 10, 2];
+// nums.sort((a,b) => a-b); 
+// console.log(nums);

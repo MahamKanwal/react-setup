@@ -26,12 +26,12 @@ const Drawer = ({ children, title, size = "400px", isOpen, onClose }) => {
         <div className="flex-1 overflow-y-auto p-3">{children}</div>
 
         {/* footer */}
-        <div className="flex gap-2 justify-end border-t-2 border-gray-200 p-3">
+        {/* <div className="flex gap-2 justify-end border-t-2 border-gray-200 p-3">
           <button className="rounded-lg border px-5 py-1" onClick={onClose}>
             Cancel
           </button>
           <button className="rounded-lg border px-5 py-1">Save</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
