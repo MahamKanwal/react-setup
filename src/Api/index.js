@@ -4,7 +4,7 @@ import userApi from "./userApi";
 export const apiUrl = import.meta.env.VITE_API_URL;
 const api = {
   userApi,
-  productApi
+  productApi,
 };
 
 export default api;

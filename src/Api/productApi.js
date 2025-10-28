@@ -12,7 +12,7 @@ const getAllProducts = async () => {
 
 const createProduct = async (product) => {
   try {
-    const { data } = await axios.post(`${apiUrl}/products`,product);
+    const { data } = await axios.post(`${apiUrl}/products`, product);
     return data;
   } catch (error) {
     console.error("Error creating product:", error);
@@ -30,7 +30,10 @@ const deleteproduct = async (productId) => {
 
 const updateProduct = async (product) => {
   try {
-    const { data } = await axios.put(`${apiUrl}/products/${product.id}`, product);
+    const { data } = await axios.put(
+      `${apiUrl}/products/${product.id}`,
+      product
+    );
     return data;
   } catch (error) {
     console.error("Error updating product:", error);
