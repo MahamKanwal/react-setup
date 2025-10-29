@@ -39,7 +39,6 @@ const UserProvider = ({ children }) => {
 
   const fetchAllUsers = async () => {
     const users = await api.userApi.getAllUsers();
-    console.log(users);
     if (!users) return;
     setUsers(users);
   };

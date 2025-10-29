@@ -9,6 +9,13 @@
       "id": "2",
       "name": "ahmed",
       "email": "ahmed@gmail.com"
+    },
+    {
+      "id": "3",
+      "user_name": "Kanwal",
+      "contact_number": "12345678",
+      "email": "kanwal@gmail.com",
+      "city": "Karachi"
     }
   ],
   "products": [

@@ -22,11 +22,11 @@ const [product, setProduct] = useState({
 
 
   const productFormFields = [
-    { name: "product_name", icon: <FaShoppingBag />, required: true },
-    { name: "price", icon: <FaDollarSign />, type: "number", required: true },
+    { name: "product_name", icon: <FaShoppingBag className="text-purple-500"/>, required: true },
+    { name: "price", icon: <FaDollarSign className="text-sky-500"/>, type: "number", required: true },
     {
       name: "category",
-      icon: <FaLayerGroup />,
+      icon: <FaLayerGroup className="text-rose-500"/>,
       type: "select",
       required: true,
       options: [
@@ -39,7 +39,7 @@ const [product, setProduct] = useState({
     },
     {
       name: "brand",
-      icon: <FaListCheck />,
+      icon: <FaListCheck className="text-emerald-500"/>,
       type: "select",
       required: true,
       options: ["Nike", "Adidas", "Samsung", "Apple", "Sony"],

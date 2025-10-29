@@ -1,5 +1,3 @@
-import React from "react";
-
 const FormGenerator = ({ fields, onSubmit, values, setValues }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;

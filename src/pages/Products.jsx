@@ -3,10 +3,10 @@ import { NavLink, Outlet } from "react-router-dom";
 const Products = () => {
   
   return (
-    <div>
+    <div className="mt-4">
 
       <NavLink to="/products/create"
-        className="px-2 py-2 bg-gray-100 rounded-lg mt-2 block ms-auto"
+        className="px-4 py-2 bg-gray-100 text-black rounded-lg mr-auto font-medium"
       >
         Add Products
       </NavLink>

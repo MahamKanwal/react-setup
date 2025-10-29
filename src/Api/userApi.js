@@ -13,6 +13,7 @@ const getAllUsers = async () => {
 const createUser = async (user) => {
   try {
     const { data } = await axios.post(`${apiUrl}/users`, user);
+  console.log(data);
     return data;
   } catch (error) {
     console.error("Error creating user:", error);
