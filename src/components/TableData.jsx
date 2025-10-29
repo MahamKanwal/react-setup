@@ -1,6 +1,5 @@
 import TableRow from "./TableRow";
 import { useUsers } from "../contexts/UserContext";
-
 const TableData = () => {
   const { users } = useUsers();
   return (
@@ -20,5 +19,4 @@ const TableData = () => {
     </table>
   );
 };
-
 export default TableData;

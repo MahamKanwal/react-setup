@@ -8,7 +8,6 @@ const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [editUser, setEditUser] = useState(null);
-
   const handleDeleteUser = async (id) => {
     const deleteUser = await api.userApi.deleteUser(id);
     if (deleteUser) {
@@ -40,6 +39,7 @@ const UserProvider = ({ children }) => {
 
   const fetchAllUsers = async () => {
     const users = await api.userApi.getAllUsers();
+    console.log(users);
     if (!users) return;
     setUsers(users);
   };

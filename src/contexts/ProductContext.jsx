@@ -28,7 +28,6 @@ const ProductProvider = ({ children }) => {
     if (!products) return;
     setProducts(products);
   };
-  console.log(products);
 
   useEffect(() => {
     fetchAllProducts();
