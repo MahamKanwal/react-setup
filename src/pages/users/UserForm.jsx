@@ -75,13 +75,13 @@
 
 // export default UserForm;
 
-import { useUsers } from "../contexts/UserContext";
 import { useState } from "react";
 import { IoMdCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaCity, FaUser } from "react-icons/fa";
-import Drawer from "../components/Drawer";
-import FormGenerator from "./FormGenerator";
+import { useUsers } from "../../contexts/UserContext";
+import Drawer from "../../components/Drawer";
+import FormGenerator from "../../components/FormGenerator";
 
 const UserForm = () => {
   const [user, setUser] = useState({

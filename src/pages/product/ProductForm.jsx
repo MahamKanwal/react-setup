@@ -1,9 +1,9 @@
-import { useProducts } from "../contexts/ProductContext";
+import { useProducts } from "../../contexts/ProductContext";
 import { useState } from "react";
 import { FaDollarSign, FaListCheck, FaLayerGroup } from "react-icons/fa6";
 import { FaShoppingBag } from "react-icons/fa";
-import Drawer from "../components/Drawer";
-import FormGenerator from "../components/FormGenerator";
+import Drawer from "../../components/Drawer";
+import FormGenerator from "../../components/FormGenerator";
 
 const ProductForm = () => {
 
@@ -45,8 +45,8 @@ const [product, setProduct] = useState({
       options: ["Nike", "Adidas", "Samsung", "Apple", "Sony"],
     },
   ];
-  
-  
+
+
   return (
     <>
 

@@ -47,4 +47,5 @@ const ProductProvider = ({ children }) => {
 
 export default ProductProvider;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useProducts = () => useContext(ProductContext);

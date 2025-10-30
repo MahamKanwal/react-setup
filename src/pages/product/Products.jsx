@@ -1,7 +1,8 @@
 import { NavLink, Outlet } from "react-router-dom";
+import ProductTable from "./ProductTable";
 
 const Products = () => {
-  
+
   return (
     <div className="mt-4">
 
@@ -10,6 +11,7 @@ const Products = () => {
       >
         Add Products
       </NavLink>
+      <ProductTable/>
      <Outlet/>
     </div>
   );
