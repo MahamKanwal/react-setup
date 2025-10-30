@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Counter from "./components/Counter";
+import Counter from "./components/counter/Counter";
 import TopBar from "./components/TopBar";
 import Users from "./pages/users/Users";
 import Products from "./pages/product/Products";
 import ProductForm from "./pages/product/ProductForm";
 import UserForm from "./pages/users/UserForm";
+import Students from "./pages/students/Students";
+import StudentForm from "./pages/students/StudentForm";
 
 const App = () => {
   return (
@@ -12,7 +14,10 @@ const App = () => {
       <Router>
         <TopBar />
         <Routes>
-          <Route path="/" element={<Users />}>
+          <Route path="/" element={<Students />}>
+            <Route path="create" element={<StudentForm />} />
+          </Route>
+          <Route path="/users" element={<Users />}>
             <Route path="create" element={<UserForm />} />
           </Route>
           <Route path="/counter" element={<Counter />} />
@@ -26,5 +31,3 @@ const App = () => {
 };
 
 export default App;
-
-

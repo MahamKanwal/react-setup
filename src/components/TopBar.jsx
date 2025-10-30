@@ -10,10 +10,10 @@ const TopBar = () => {
 
       <ul className="flex gap-5 font-bold">
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/">Students</NavLink>
         </li>
         <li>
-          <NavLink to="/">Users</NavLink>
+          <NavLink to="/users">Users</NavLink>
         </li>
         <li>
           <NavLink to="/products">Products</NavLink>

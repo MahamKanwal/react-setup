@@ -38,8 +38,4 @@ const Drawer = ({ children, title, size = "md" }) => {
   );
 };
 
-  
-
 export default Drawer;
-
-

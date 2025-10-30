@@ -1,37 +1,29 @@
 {
+  "students": [
+    {
+      "id": "1",
+      "student_name": "mahi",
+      "roll_no": "12345",
+      "email": "mahi@gmail.com",
+      "course": "Web Development"
+    }
+  ],
   "users": [
     {
       "id": "1",
-      "name": "a",
-      "email": "a@gmail.com"
-    },
-    {
-      "id": "2",
-      "name": "ahmed",
-      "email": "ahmed@gmail.com"
-    },
-    {
-      "id": "3",
-      "user_name": "Ali",
-      "contact_number": "12345678",
+      "user_name": "ali",
+      "contact_number": "0328792",
       "email": "ali@gmail.com",
-      "city": "Karachi"
-    },
-    {
-      "id": "4",
-      "user_name": "Kanwal",
-      "contact_number": "12345678",
-      "email": "kanwal@gmail.com",
-      "city": "Karachi"
+      "city": "Islamabad"
     }
   ],
   "products": [
     {
       "id": "1",
-      "product_name": "lap",
-      "price": "999",
-      "category": "Electronics",
-      "brand": "Nike"
+      "product_name": "book",
+      "price": "500",
+      "category": "Books and Stationery",
+      "brand": "Sony"
     }
   ]
 }

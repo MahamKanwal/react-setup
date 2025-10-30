@@ -1,12 +1,10 @@
-import { useUsers } from '../../contexts/UserContext'
-import DynamicTable from '../../components/DynamicTable';
+import { useUsers } from "../../contexts/UserContext";
+import DynamicTable from "../../components/DynamicTable";
 
 const UserTable = () => {
-    const { users } = useUsers();
-    const userTableColumns = ["name", "email", "contact_number", "city"]
-    return (
-        <DynamicTable columns={userTableColumns} data={users} />
-    )
-}
+  const { users } = useUsers();
+  const userTableColumns = ["name", "email", "contact_number", "city"];
+  return <DynamicTable columns={userTableColumns} data={users} />;
+};
 
-export default UserTable
+export default UserTable;

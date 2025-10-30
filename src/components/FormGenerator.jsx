@@ -99,5 +99,3 @@ const SelectElement = ({
     </div>
   );
 };
-
-
