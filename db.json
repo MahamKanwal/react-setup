@@ -16,6 +16,13 @@
       "contact_number": "12345678",
       "email": "kanwal@gmail.com",
       "city": "Karachi"
+    },
+    {
+      "id": "4",
+      "user_name": "ali",
+      "contact_number": "03170128852",
+      "email": "ykhizar65@gmail.com",
+      "city": "Karachi"
     }
   ],
   "products": [
@@ -25,6 +32,13 @@
       "price": "999",
       "category": "Electronics",
       "brand": "Nike"
+    },
+    {
+      "id": "2",
+      "product_name": "samsung s25 ultra",
+      "price": "100000",
+      "category": "Electronics",
+      "brand": "Samsung"
     }
   ]
 }

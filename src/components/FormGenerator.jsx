@@ -1,3 +1,5 @@
+import { snakeCaseToTitle } from "../utils/helperFunctions";
+
 const FormGenerator = ({ fields, onSubmit, values, setValues }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -98,9 +100,4 @@ const SelectElement = ({
   );
 };
 
-const snakeCaseToTitle = (name) => {
-  return name
-    .split("_")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-};
+
